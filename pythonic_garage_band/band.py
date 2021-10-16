@@ -7,9 +7,15 @@ class Band():
         self.name=str(name)
         self.members=list(members)
         self.band_name=str(band_name)
+        Band.instances.append(self)
+        
         
     def play_solos(self):
         return solos
+    
+    def to_list():
+        return Band.instances
+        
         
     
 
@@ -40,6 +46,8 @@ class Musician(Band):
         solos.append(str(self.solo))
         return self.solo
     
+    
+    
 
 # __________________________________________________
 
@@ -65,5 +73,7 @@ class Drummer(Musician):
         self.solo="rattle boom crash"
 
 
-
-    
+if __name__ == "__main__":
+    the_nobodies = Band("The Nobodies", [])
+    print(the_nobodies) 
+  
