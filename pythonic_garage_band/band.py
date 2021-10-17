@@ -3,6 +3,7 @@ solos=[]
 
 
 class Band():
+    instances=[]
     def __init__(self,name="",members=[],band_name=""):
         self.name=str(name)
         self.members=list(members)
